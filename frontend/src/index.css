@@ -1,0 +1,328 @@
+:root {
+  --plava-tamna: #0f2942;
+  --plava-srednja: #1e4a72;
+  --plava-svetla: #2c6ba3;
+  --plava-akcenat: #4a90c2;
+  --pozadina: #f4f6f9;
+  --bela: #ffffff;
+  --siva-tekst: #4a5568;
+  --siva-granica: #dfe3e8;
+  --zelena: #2e7d5b;
+  --crvena: #b33a3a;
+  --senka: 0 1px 3px rgba(15, 41, 66, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--pozadina);
+  color: #1a202c;
+}
+
+h1, h2, h3 {
+  color: var(--plava-tamna);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--plava-akcenat);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--siva-granica);
+  margin: 25px 0;
+}
+
+a {
+  color: var(--plava-svetla);
+}
+
+/* Forme */
+form {
+  background: var(--bela);
+  border: 1px solid var(--siva-granica);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  box-shadow: var(--senka);
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--siva-tekst);
+}
+
+input, select {
+  padding: 8px 10px;
+  border: 1px solid var(--siva-granica);
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--plava-akcenat);
+  box-shadow: 0 0 0 2px rgba(74, 144, 194, 0.2);
+}
+
+/* Dugmad */
+button {
+  background-color: var(--plava-svetla);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: var(--plava-tamna);
+}
+
+/* Dugme za odjavu/otkazivanje - crvenkasto */
+button:has(+ *):focus {
+  outline: none;
+}
+
+/* Liste */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--bela);
+  border: 1px solid var(--siva-granica);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--senka);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.li-tekst {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+.li-akcije {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Container za celu stranicu */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--plava-tamna);
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar .naslov {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar .naslov img {
+  height: 38px;
+  width: auto;
+}
+
+.navbar-linkovi {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-linkovi a {
+  color: rgba(255,255,255,0.85);
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-linkovi a:hover {
+  background-color: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.navbar-korisnik {
+  color: white;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  margin-left: 6px;
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.navbar-odjava {
+  background-color: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-odjava:hover {
+  background-color: rgba(255,255,255,0.15);
+  color: white;
+}
+
+/* Poruke */
+.poruka {
+  background-color: #eaf2fa;
+  border-left: 4px solid var(--plava-akcenat);
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+/* Auth stranice - login/register */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--plava-tamna) 0%, var(--plava-svetla) 100%);
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--bela);
+  border-radius: 14px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 50px rgba(15, 41, 66, 0.35);
+  text-align: center;
+}
+
+.auth-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.auth-logo-slika {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.auth-logo-tekst {
+  font-weight: 700;
+  color: var(--plava-tamna);
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.auth-podnaslov {
+  color: var(--siva-tekst);
+  font-size: 0.9rem;
+  margin-bottom: 26px;
+}
+
+.auth-card h1 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.auth-card form {
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.auth-card form > div {
+  text-align: left;
+}
+
+.auth-card button[type="submit"] {
+  margin-top: 10px;
+  padding: 11px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.auth-card .poruka {
+  text-align: left;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: var(--siva-tekst);
+}
+
+.uska-forma {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 320px;
+}
+
+.uska-forma > div {
+  width: 100%;
+}
+
+.uska-forma input {
+  width: 100%;
+}
