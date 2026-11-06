@@ -1,6 +1,6 @@
 # Zakazivanje ispita
 
-Veb aplikacija za organizaciju ispitnih rokova i termina. Omogucava pregled predmeta, profesora, ucionica i ispitnih rokova, kao i rezervaciju dostupnih termina za ulogovane korisnike.
+Veb aplikacija za organizaciju ispitnih rokova i termina. Omogucava pregled predmeta, profesora, ucionica i ispitnih rokova, kao i rezervaciju dostupnih termina za ulogovane korisnike. Projekat je rađen kao deo diplomskog rada.
 
 ## Funkcionalnosti
 
